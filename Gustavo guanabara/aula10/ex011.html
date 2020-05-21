@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Qual a sua Nacionalidade</h1>
+  Onde você nasceu:<input type="text" name="txtpais" id="txtpais"> Pais
+    <input type="button" value="Verificar" onclick="procurar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function procurar(){
+        var txtpais = window.document.querySelector('input#txtpais')
+        var res = window.document.querySelector('div#res')
+        var vel = txtpais.value
+        var pais = "brasil"
+
+       
+        res.innerHTML =`O pais aonde você nasceu é ${vel}`
+        if(vel == pais) {
+            res.innerHTML += `<p>Você é Brasileiro`
+        }else{
+            res.innerHTML += `<p>Você é Estrangeiro<p>`
+
+        }
+        res.innerHTML += `<p>Parabens você esta vivo<p>`
+        
+        }
+    </script>
+    
+</body>
+</html>
